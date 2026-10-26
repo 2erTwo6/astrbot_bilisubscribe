@@ -1,0 +1,7 @@
+name: astrbot_bilisubscribe
+display_name: B站直播订阅
+desc: 通过 LLM 工具搜索 B 站主播、按直播间号订阅，开播与下播时向当前会话推送提醒，开播消息附带直播画面截图。
+short_desc: B站主播开播 / 下播订阅提醒
+version: v1.0.0
+author: astrbot-bilisubscribe
+astrbot_version: ">=4.16,<5"

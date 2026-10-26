@@ -1,0 +1,29 @@
+{
+  "poll_interval": {
+    "description": "直播状态轮询间隔（秒）",
+    "type": "int",
+    "default": 60,
+    "slider": {"min": 30, "max": 600, "step": 10},
+    "hint": "每个订阅的直播间都会按这个间隔检查一次直播状态，间隔越小提醒越及时，但请求 B 站越频繁。"
+  },
+  "max_search_results": {
+    "description": "搜索主播时最多返回的结果数",
+    "type": "int",
+    "default": 5,
+    "slider": {"min": 1, "max": 10, "step": 1}
+  },
+  "send_screenshot": {
+    "description": "开播提醒是否附带直播画面截图",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后开播消息只包含文字。截图来自 B 站为该直播间生成的实时画面关键帧。"
+  },
+  "cookie": {
+    "description": "B 站 Cookie（可选）",
+    "type": "string",
+    "default": "",
+    "secret": true,
+    "hint": "留空即用游客身份，功能完全可用。填入登录后的 Cookie（至少含 SESSDATA）可以降低被限流的概率，并能查询部分受限直播间。浏览器 F12 → Application → Cookies → https://www.bilibili.com 复制 SESSDATA 即可，只粘贴它的值也可以。",
+    "obvious_hint": true
+  }
+}
